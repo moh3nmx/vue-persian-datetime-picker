@@ -183,7 +183,6 @@
                         />
                       </slot>
                     </button>
-                    <transition name="fade">
                       <div
                         :key="date.xMonth()"
                         class="vpd-month-label"
@@ -198,7 +197,6 @@
                           />
                         </slot>
                       </div>
-                    </transition>
                     <button
                       type="button"
                       class="vpd-next"
