@@ -183,7 +183,7 @@
                         />
                       </slot>
                     </button>
-                    <transition name="slideX">
+                    <transition name="fade">
                       <div
                         :key="date.xMonth()"
                         class="vpd-month-label"
