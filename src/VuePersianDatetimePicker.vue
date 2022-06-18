@@ -166,22 +166,7 @@
               <template v-else>
                 <template v-if="hasStep('d')">
                   <div :class="['vpd-controls', directionClassDate]">
-                    <button
-                      type="button"
-                      class="vpd-next"
-                      :title="lang.nextMonth"
-                      :disabled="nextMonthDisabled"
-                      @click="nextMonth"
-                    >
-                      <slot name="next-month">
-                        <arrow
-                          width="10"
-                          fill="#000"
-                          direction="right"
-                          style="vertical-align: middle"
-                        />
-                      </slot>
-                    </button>
+                    
                     <button
                       type="button"
                       class="vpd-prev"
@@ -214,6 +199,22 @@
                         </slot>
                       </div>
                     </transition>
+                    <button
+                      type="button"
+                      class="vpd-next"
+                      :title="lang.nextMonth"
+                      :disabled="nextMonthDisabled"
+                      @click="nextMonth"
+                    >
+                      <slot name="next-month">
+                        <arrow
+                          width="10"
+                          fill="#000"
+                          direction="right"
+                          style="vertical-align: middle"
+                        />
+                      </slot>
+                    </button>
                   </div>
                   <div
                     class="vpd-clearfix"
