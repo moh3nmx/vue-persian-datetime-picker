@@ -61,7 +61,7 @@
 
     <transition :name="isPopover ? '' : 'vpd-fade-scale'">
       <div
-        v-if="visible"
+        v-if="visible || alwaysOpen"
         ref="picker"
         :class="[
           'vpd-wrapper',
@@ -475,6 +475,13 @@ export default {
     event: 'input'
   },
   props: {
+    /**
+     * Picker always open
+     * @type Boolean
+     * @default false
+     */
+    alwaysOpen: { type: [Boolean], default: false },
+
     /**
      * Default input value
      * @type Number String
